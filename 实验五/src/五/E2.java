@@ -1,4 +1,4 @@
-package 四;
+package 五;
 
 import java.util.*;
 //使用Scanner类的实例解析字符串“数学87分”，“物理76分”，“英语96分”中的考试成绩，
