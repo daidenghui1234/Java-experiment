@@ -10,8 +10,6 @@ import java.util.*;
 public class Wenben extends Frame implements TextListener,ActionListener{
 	TextArea text1 , text2;
 	
-	
-	
 	Wenben()
 	{
 		setLayout(new FlowLayout());

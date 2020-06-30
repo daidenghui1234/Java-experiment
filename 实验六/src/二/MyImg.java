@@ -1,14 +1,11 @@
 package 二;
 
-/**
- *  电子相册
- */
 
 import java.awt.*;
 import java.awt.event.*;
- 
+
 import javax.swing.*;
- 
+
 public class MyImg extends JFrame{
 	TestPanel tp=null;
 	JPanel jp=null;
@@ -18,7 +15,7 @@ public class MyImg extends JFrame{
 	}
 	public MyImg(){
 		tp=new TestPanel(6, 1);//设置相夹大小，并默认显示第一张照片
-		
+
 		jp=new JPanel();//JPanel默认流式布局
 		jb1=new JButton("首页");
 		jp.add(jb1);
@@ -28,7 +25,7 @@ public class MyImg extends JFrame{
 		jp.add(jb3);
 		jb4=new JButton("尾页");
 		jp.add(jb4);
-		
+
 		//注册监听
 		jb1.addActionListener(tp);
 		jb1.setActionCommand("first");
@@ -38,20 +35,20 @@ public class MyImg extends JFrame{
 		jb3.setActionCommand("next");
 		jb4.addActionListener(tp);
 		jb4.setActionCommand("last");
-		
+
 		this.add(tp);//JFrame默认边框布局
 		this.add(jp,BorderLayout.SOUTH);
-		
+
 		this.setSize(400,300);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
- 
+
 }
 class TestPanel extends JPanel implements ActionListener{
 	int i,size;
-	String imgPath,srcPath="/myTest/";//相片路径
-	String imgSuffix=".jpg";//图片后缀名
+	String imgPath,srcPath="src/二/myTest/";//相片路径
+	String imgSuffix=".png";//图片后缀名
 	public TestPanel(int size,int i){
 		this.size=size;
 		this.i=i;
@@ -84,5 +81,5 @@ class TestPanel extends JPanel implements ActionListener{
 		//System.out.println(imgPath);
 		this.repaint();//TestPanel重绘
 	}
-	
+
 }

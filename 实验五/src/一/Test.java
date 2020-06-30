@@ -12,9 +12,14 @@ public class Test {
         Scanner in = new Scanner(System.in);
         IdCard idCard1 = new IdCard();
         IdCard idCard2 = new IdCard();
-        System.out.println("请输入两个身份证，中间用空格隔开");
+
+        System.out.println("请输入第一个身份证");
         idCard1.setID_Card(in.next());
+        System.out.println("请输入第二个身份证");
         idCard2.setID_Card(in.next());
+
+        System.out.println(idCard1);
+        System.out.println(idCard2);
         if(idCard1.equals(idCard2)) {
             System.out.println("两个身份证相同");
             System.out.println("所在城市："+idCard1.getCity());

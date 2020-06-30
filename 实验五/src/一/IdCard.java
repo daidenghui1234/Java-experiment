@@ -11,7 +11,7 @@ import java.util.Objects;
  *      设计一个java 应用程序，其功能为：输入两个身份证字符串，判断两个身份证是否相同，确定身份证所属省份和性别；提取身份证出生日期，输出两个身份证相关信息。
  */
 public class IdCard {
-    private static String ID_Card;
+    private String ID_Card;
     /** 省、直辖市代码表 */
     public String cityCode[][] = {{"广东","44"}, {"山东","37"}, {"江苏","32"}, {"河南","41"}, {"河北","13"},
             {"浙江","33"}, {"陕西","61"}, {"湖南","43"}, {"福建","35"}, {"云南","53"},
