@@ -13,9 +13,9 @@ public class Earth extends JLabel implements ActionListener {
      setLayout(new FlowLayout());
      setPreferredSize(new Dimension(w,h));
      timer=new Timer(20,this); //创建timer,振铃间隔是20毫秒当前Earth对象为其监视器     
-     setIcon(new ImageIcon("earth.jpg"));
+     setIcon(new ImageIcon("src/一/实验4/earth.JPG"));
      setHorizontalAlignment(SwingConstants.CENTER);
-     moon=new JLabel(new ImageIcon("moon.jpg"),SwingConstants.CENTER);
+     moon=new JLabel(new ImageIcon("src/一/实验4/moon.jpg"),SwingConstants.CENTER);
      add(moon);
      moon.setPreferredSize(new Dimension(60,60));
      pointX[0]=0;                
