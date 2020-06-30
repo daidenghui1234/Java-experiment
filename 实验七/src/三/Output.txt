@@ -1,0 +1,42 @@
+1 package 三;
+2 
+3 import java.io.BufferedReader;
+4 import java.io.BufferedWriter;
+5 import java.io.FileNotFoundException;
+6 import java.io.FileReader;
+7 import java.io.FileWriter;
+8 import java.io.IOException;
+9 
+10 
+11 public class IOtest02 {
+12 
+13 	public static void main(String[] args) {
+14 		// TODO Auto-generated method stub
+15 		BufferedReader br = null;
+16 		BufferedWriter bw = null;
+17 		try {
+18 			br = new BufferedReader(new FileReader("src/三/Input.txt"));
+19 			bw = new BufferedWriter(new FileWriter("src/三/Output.txt"));
+20 			String str = "";
+21 			int i = 1;
+22 			while((str = br.readLine()) != null){
+23 				bw.write(i+" ");
+24 				bw.write(str);
+25 				System.out.println(str);
+26 				bw.newLine();
+27 				i++;
+28 			}
+29 			bw.flush();
+30 			bw.close();
+31 			br.close();
+32 
+33 		} catch (FileNotFoundException e) {
+34 			// TODO Auto-generated catch block
+35 			System.out.println("找不到指定文件！");
+36 		}catch (IOException e) {
+37 			// TODO Auto-generated catch block
+38 			e.printStackTrace();
+39 		}
+40 	}
+41 
+42 }
